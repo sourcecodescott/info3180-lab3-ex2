@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+}
+
+.field_style{
+    padding-bottom: 25px;
+}
+
+.label_style{
+    font-weight: bold;
+}
+
+span{
+    font-weight: bold;
+    color:red;
+}

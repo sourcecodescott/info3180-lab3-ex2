@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h1 class="page-header">Contact Form</h1>
+<p>Fill in this form to contact the site owners.</p>
+
+<form action="/contact/" method="POST">
+<!-- <form action="{{ url_for('contact') }}" method="POST"> -->
+    
+    <div class="field_style">
+        <label class="label_style">Name </label><span>(Required)</span>
+        <p>Please enter your full name.</p>
+        <input type='text' name='name' required='true'>
+    </div>
+    
+    <div class="field_style">
+        <label class="label_style">Email </label><span>(Required)</span>
+        <p>Please enter your email address.</p>
+        <input type='email' name='address' required='true'>
+    </div>
+    
+    <div class="field_style">
+        <label class="label_style">Subject </label><span>(Required)</span>
+        <p>Please enter the subject for your message.</p>
+        <input type='text' name='subject' required='true'>
+    </div>
+    
+    <div class="field_style">
+        <label class="label_style">Message </label><span>(Required)</span>
+        <p>Please enter the message you would like to send.</p>
+        <textarea rows="4" cols="50" name="message" required='true'></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Send</button>
+    
+</form>
+
+   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flash>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+{% endblock %}

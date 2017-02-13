@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+		{% block main %}
+
+		
+			<div  style="padding-top: 20px; padding-left: 100px; padding-right: 100px">
+				<h1>PROFILE</h1>
+				<hr/>
+				<div style="padding: 15px">
+					<div id="p_img" style="float: left;" >
+						<img src="{{ url_for('static', filename='samath.jpg') }}"
+							style="border:5px solid silver; border-radius: 5px; height: 300px">	
+					</div>
+					<div style="float: left; margin-left: 20px;">	
+						<table style= "border-collapse: collapse;border: 1px solid silver; border-radius:5px;padding: 20px; width: 260%">
+	  						<tr style="background-color: #E5E4E2; border-bottom: 1px solid silver;">
+	    						<th style="text-align: left;padding-left: 25px">
+	    							<h2>
+	    								<strong>Samath Scott</strong>
+	    							</h2>
+	    						</th>
+	    	
+	  						</tr>
+						  	<tr>
+						    	<td style="padding: 25px">
+							    	<br/>Today's date is {{ currenttime }}<br/><br/><hr/><br/>
+									<strong>Username: </strong>Samath
+									<br/><br/>
+									<strong>ID Number: </strong>620081903
+									<br/><br/>
+									<strong>Age: </strong>25
+									<br/><br/>
+									<strong>Gender: </strong>Male
+									<br/><br/><hr/><br/><br/>		
+									I am a computer programmer!<br/><br/>
+								</td>  
+						  </tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		{% endblock %}
